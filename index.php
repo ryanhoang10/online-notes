@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
       
-    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+<!--      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
+      
+      <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="styles.css">
 
     <title>Online Notes</title>
   </head>
   <body>
     <!-- Navigation Bar -->
+
       <nav role="navigation" class="navbar navbar-custom navbar-fixed-top">
           
           <div class="container-fluid">
@@ -53,6 +56,12 @@
           </div>
       
       </nav>
+
+      
+      
+
+      
+      
     <!-- Jumbotron with Sign up Button -->
       
       <div class="jumbotron" id="myContainer">
@@ -68,6 +77,7 @@
       <form method="post" id="loginform">
         <div class="modal" role="dialog" id="loginModal" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
+                
                 <div class="modal-content">
                 <div class="modal-header">
                 
@@ -94,25 +104,38 @@
                         <label for="loginpassword" class="sr-only">Enter your Password: </label>
                         <input class="form-control" type="loginpassword" name="loginpassword" placeholder="Choose a Password" maxlength="30" id="loginpassword">
                     </div>
+                    
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="rememberMe" id="rememberMe">
+                            Remember me
+                        </label>
+                            
+                            <a class="pull-right" style="cursor: pointer" data-dismiss="modal" data-target="#forgotPasswordModal" data-toggle="modal">
+                                Forgot Password?
+                            </a>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        
+                        
+                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal" data-target="#signupModal" data-toggle="modal">Register</button>
+                        
+                        <input class="btn green" name="login" type="submit" value="Login">
 
-                    
-                </div>
-                    
-                    
-                <div class="modal-footer">
-                    <input class="btn green" name="signup" type="submit" value="Sign up">
-
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 </div>
                 </div>
             </div>
+                
+        </div>
         </div>
       </form>
       
     <!-- Sign up form -->
       
       <form method="post" id="signupform">
-        <div class="modal" role="dialog" id="signupModal" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal" role="dialog" id="signupModal">
             <div class="modal-dialog">
                 <div class="modal-content">
                 <div class="modal-header">
@@ -160,6 +183,43 @@
       </form>
       
     <!-- Maybe forget Password -->
+      
+      <form method="post" id="forgotPasswordForm">
+        <div class="modal" role="dialog" id="forgotPasswordModal" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                
+                <button class="close" data-dismiss="modal">
+                    &times;
+                </button>
+   
+                <h4 class="modal-title">Forgot Password? Enter Your Username</h4>   
+                </div>
+                    
+                    
+                <div class="modal-body">
+                    
+                    <!---Forgot password message form from PHP--->
+                    
+                    <div id="loginMessage"></div>
+                    
+                    <div class="form-group">
+                        <label for="forgotPassword" class="sr-only">Enter your Username: </label>
+                        <input class="form-control" type="text" name="loginusername" placeholder="Username" maxlength="30" id="loginusername">
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <input class="btn green" name="signup" type="submit" value="Sign up">
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+      </form>
     
     <!-- Footer -->
       
