@@ -46,7 +46,7 @@
                   </ul>
                   
                    <ul class="nav navbar-nav navbar-right"> 
-                    <li><a href="#">Login</a></li>               
+                    <li><a href="#loginModal" data-toggle="modal">Login</a></li>               
                   </ul>
                   
               </div>
@@ -60,12 +60,104 @@
           <p>Your notes with you wherever</p>
           <p>Easy to use!</p>
           
-          <button type="button" class="btn btn-lg green signup">Sign Up</button>
+          <button type="button" class="btn btn-lg green signup" data-target="#signupModal" data-toggle="modal">Sign Up</button>
       </div>
       
     <!-- Login form -->
       
+      <form method="post" id="loginform">
+        <div class="modal" role="dialog" id="loginModal" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                
+                <button class="close" data-dismiss="modal">
+                    &times;
+                </button>
+   
+                <h4 class="modal-title">Login</h4>   
+                </div>
+                    
+                    
+                <div class="modal-body">
+                    
+                    <!---Login message form from PHP--->
+                    
+                    <div id="loginMessage"></div>
+                    
+                    <div class="form-group">
+                        <label for="loginusername" class="sr-only">Enter your Username: </label>
+                        <input class="form-control" type="text" name="loginusername" placeholder="Username" maxlength="30" id="loginusername">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loginpassword" class="sr-only">Enter your Password: </label>
+                        <input class="form-control" type="loginpassword" name="loginpassword" placeholder="Choose a Password" maxlength="30" id="loginpassword">
+                    </div>
+
+                    
+                </div>
+                    
+                    
+                <div class="modal-footer">
+                    <input class="btn green" name="signup" type="submit" value="Sign up">
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+                </div>
+            </div>
+        </div>
+      </form>
+      
     <!-- Sign up form -->
+      
+      <form method="post" id="signupform">
+        <div class="modal" role="dialog" id="signupModal" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                
+                <button class="close" data-dismiss="modal">
+                    &times;
+                </button>
+   
+                <h4 class="modal-title">Sign Up Now!</h4>   
+                </div>
+                    
+                    
+                <div class="modal-body">
+                    
+                    <!---Sign up message form from PHP--->
+                    
+                    <div id="signupMessage"></div>
+                    
+                    <div class="form-group">
+                        <label for="username" class="sr-only">Username: </label>
+                        <input class="form-control" type="text" name="username" placeholder="Username" maxlength="30" id="username">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password" class="sr-only">Choose a Password: </label>
+                        <input class="form-control" type="password" name="password" placeholder="Choose a Password" maxlength="30" id="password">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password2" class="sr-only">Confirm Password: </label>
+                        <input class="form-control" type="password" name="password2" placeholder="Confirm Password" maxlength="30" id="password2">
+                    </div>
+                    
+                </div>
+                    
+                    
+                <div class="modal-footer">
+                    <input class="btn green" name="signup" type="submit" value="Sign up">
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+                </div>
+            </div>
+        </div>
+      </form>
       
     <!-- Maybe forget Password -->
     
